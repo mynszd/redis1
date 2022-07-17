@@ -1,0 +1,43 @@
+
+##��������Դ
+spring:
+  datasource:
+    ##�������ͣ�mysql8.0���ϰ汾�� com.mysql.cj.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
+    #url: jdbc:mysql://192.168.20.164:3306/crm?characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/crm?characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+
+
+##第二部，加入redis依赖配置
+  redis:
+    database: 1 # Redis���ݿ�������Ĭ��Ϊ0��
+    host: localhost #Redis��������ַ
+    port: 6379 #�˿�
+    password: #���ӷ�����������Ĭ��Ϊ��
+    jedis:
+      pool:
+        max-active: 200 #���ӳ������������ʹ�ø�ֵ��ʾû�����ƣ�
+        max-wait: -1 #���ӳ��������ʱ�䣨ʹ�ø�ֵ��ʾû�����ƣ�
+        max-idle: 10 #���ӳ��е�����������
+        min-idle: 0 #���ӳ��е���С��������
+    timeout: 1000 #���ӳ�ʱʱ��
+
+
+logging:
+  level:
+    com.ljl.redis.mapper:
+      debug
+
+
+
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.ljl.redis.domain
+
+
+
+
+
+

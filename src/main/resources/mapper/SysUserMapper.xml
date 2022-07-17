@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ljl.redis.mapper.SysUserMapper">
+  <resultMap id="BaseResultMap" type="com.ljl.redis.domain.SysUser">
+    <!--@mbg.generated-->
+    <!--@Table sys_user-->
+    <id column="usr_id" jdbcType="INTEGER" property="usrId" />
+    <result column="usr_name" jdbcType="VARCHAR" property="usrName" />
+    <result column="usr_password" jdbcType="VARCHAR" property="usrPassword" />
+    <result column="usr_role_id" jdbcType="INTEGER" property="usrRoleId" />
+    <result column="usr_flag" jdbcType="TINYINT" property="usrFlag" />
+  </resultMap>
+
+</mapper>
